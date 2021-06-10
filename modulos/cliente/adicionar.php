@@ -1,13 +1,30 @@
 <?php
-if(isset($_POST['botao']) && $_POST['botao'] == "Salvar"){
-    include("classes/Cliente.class.php");
-    include("classes/DB.class.php");
 
-    $add = new Clinte();
-    $add->setNome($_POST['nome']);
-    $add->setEmail($_POST['email']);
-    $add->adicionar();   
+include("classes/Cliente.class.php");
+include("classes/DB.class.php");
 
+if (isset($_GET['id'])) {
+
+    $id = $_GET['id'];
+
+    $cliente = new Cliente($id);
+
+}else {
+    $cliente = new Cliente();
+}
+
+if (isset($_POST['botao'])) {
+
+    if (!isset($_GET['id'])) {
+        $cliente->setNome($_POST['nome']);
+        $cliente->setEmail($_POST['email']);
+        $cliente->adicionar();
+    } else{
+
+    $cliente->setNome($_POST['nome']);
+    $cliente->setEmail($_POST['email']);
+    $cliente->atualizar();
+    }
 }
 ?>
 
@@ -15,7 +32,7 @@ if(isset($_POST['botao']) && $_POST['botao'] == "Salvar"){
 <h1>ADICIONAR CLIENTE</h1>
 
 <form method="post" action="">
-Nome do Cliente: <input type='text' name='nome'> <br/>
-Email do Cliente: <input type='text' name='email'><br/>
-<input type='submit' name='botao' value="Salvar">
+    Nome do Cliente: <input type='text' name='nome' value="<?php echo $cliente->getNome() ?? '';?>"> <br/>
+    Email do Cliente: <input type='text' name='email'  value="<?php echo $cliente->getEmail() ?? '';?>"><br/>
+    <input type='submit' name='botao' value="Salvar">
 </form>

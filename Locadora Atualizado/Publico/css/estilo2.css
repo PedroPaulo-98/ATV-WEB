@@ -1,0 +1,83 @@
+.font50{
+     
+    font-size: 110px;
+    
+
+}
+
+.vermelho{
+    color: red;
+}
+
+h1.verde{
+    color: green;
+}
+
+div p.vermelho{
+    font-size: 70px;
+    color: red;
+}
+
+div.segundaDiv p.vermelho{
+    font-size: 90px;
+}
+
+div.primeiraDiv p.vermelho{
+    font-size: 80px;
+}
+
+body{
+    width:  80%;
+    background-color: white;
+    font-size: 18px;
+    color: red;
+}
+
+#header{   
+    width: 80%;
+    background-color: green;  
+    font-size: 38px;    
+    color: blue;
+    float: right;
+}
+
+#left{   
+    width: 10%;
+    background-color: blue;  
+    font-size: 18px;    
+    color: red;
+    float: right;
+}
+
+#content{   
+    width: 70%;
+    background-color: black;  
+    font-size: 18px;    
+    color: white;
+    float: right;
+}
+
+#footer{   
+    width: 70%;
+    background-color: white;  
+    font-size: 18px;    
+    color: black;
+    float: right;
+}
+
+.coluna1{   
+    width: 50%;
+    background-color: red;  
+    font-size: 18px;    
+    color: blue;
+    float: right;
+}
+
+.coluna2{   
+    width: 50%;
+    background-color: yellow;  
+    font-size: 18px;    
+    color: blue;
+    float: right;
+}
+

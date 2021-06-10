@@ -1,5 +1,5 @@
 <?php
-    include('classes/DB.class.php');    
+
     class Produto{
         private $id;
         private $descricao;
