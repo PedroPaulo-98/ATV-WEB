@@ -1,4 +1,4 @@
-## POSSIVELMENTE NÃO FINALIZEI :'(
+## POSSIVELMENTE NÃO ESTÁ 100% FINALIZADO :'(
 ## PERDEMO
   <div>
   <a href="https://github.com/PedroPaulo-98/CAPA">
